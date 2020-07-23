@@ -6,6 +6,12 @@
 
 http://47.98.252.1:8082/
 
+体验账号
+
+- tracer@battlenet.com  
+
+- tracer
+
 ### index页面
 
 如果未登录，index页面会有Sign In按钮，不会有提示消息。
@@ -42,3 +48,24 @@ http://47.98.252.1:8082/
 - Thymeleaf
 - MySQL
 - HTML + CSS + Bootstrap
+
+## 运行
+
+本地需要有一个MySQL数据库才能运行
+
+table的创建命令：
+
+```mysql
+CREATE DATABASE spring;
+
+CREATE TABLE `users` (
+  `id` bigint NOT NULL AUTO_INCREMENT,
+  `email` varchar(100) NOT NULL,
+  `password` varchar(100) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `createdAt` bigint NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `users_email_uindex` (`email`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8
+```
+
